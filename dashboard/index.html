@@ -1,0 +1,67 @@
+<!doctype html>
+<html>
+<head>
+<meta charset="utf-8">
+<title>Implied Radar</title>
+<link rel="stylesheet" href="app.css">
+</head>
+<body>
+<header class="top">
+  <div>
+    <h1>Implied Radar</h1>
+    <p class="sub">Which pre-token protocol is worth farming next?</p>
+  </div>
+  <div class="judge" id="judgeNote"></div>
+</header>
+<section class="stats" id="stats"></section>
+<section class="hero">
+  <h2>Start here</h2>
+  <p id="stripNote" class="small"></p>
+  <div class="strip" id="strip"></div>
+</section>
+<nav class="tabs">
+  <button data-tab="board" class="on" type="button">Board</button>
+  <button data-tab="method" type="button">Method</button>
+  <button data-tab="ref" type="button">Reference</button>
+  <span class="seg" id="poolSeg">
+    <button data-pool="pre" class="on" type="button">Pre-token radar</button>
+    <button data-pool="live" type="button">Recorded tokens</button>
+  </span>
+</nav>
+<main>
+  <section id="tab-board">
+    <div class="filters">
+      <label>Search <input id="fSearch" type="search" placeholder="Name" autocomplete="off"></label>
+      <label>Category <select id="fCat"><option value="">All</option></select></label>
+      <label>Chain <select id="fChain"><option value="">All</option></select></label>
+      <label class="chk"><input id="fWatch" type="checkbox"> Watchlist only</label>
+      <span class="fCount" id="fCount"></span>
+    </div>
+    <p class="cover" id="coverLine"></p>
+    <table id="boardTable">
+        <thead><tr>
+          <th data-sort="rank">Rank</th>
+          <th data-sort="name">Protocol</th>
+          <th data-sort="tvl">TVL</th>
+          <th data-sort="chg">7d</th>
+          <th data-sort="days">Age</th>
+          <th data-sort="implied">Implied value</th>
+          <th data-sort="net">Net $/hr</th>
+          <th data-sort="tier">Tier</th>
+          <th>Conf</th>
+        </tr></thead>
+        <tbody id="boardBody"></tbody>
+      </table>
+    <p class="under">Ranks are point estimates — read the band in the detail view before acting on a rank.</p>
+  </section>
+  <section id="tab-method" hidden></section>
+  <section id="tab-ref" hidden></section>
+</main>
+<aside id="drawer" hidden></aside>
+<footer id="proof"></footer>
+<script src="model.js"></script>
+<script src="farm.js"></script>
+<script src="data.js"></script>
+<script src="app.js"></script>
+</body>
+</html>

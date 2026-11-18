@@ -1,0 +1,33 @@
+:root{--bg:#faf7f0;--card:#fff;--ink:#1c2333;--mut:#5c6474;--line:#e3ddd0;--acc:#0e6b4f;--amb:#b45309;--neg:#b42318}
+*{box-sizing:border-box}body{margin:0;background:var(--bg);color:var(--ink);font:14px/1.45 -apple-system,"Segoe UI",Roboto,sans-serif}
+h1{font-size:26px;margin:0}h2{font-size:17px;margin:0}h3{font-size:15px;margin:22px 0 8px}p{margin:6px 0}
+.top{display:flex;justify-content:space-between;gap:24px;padding:20px 28px}.sub{color:var(--mut);margin:4px 0 0}
+.judge{max-width:520px;background:var(--card);border:1px solid var(--line);border-left:4px solid var(--acc);border-radius:8px;padding:10px 14px;font-size:13px}
+.stats{display:flex;gap:8px;flex-wrap:wrap;padding:0 28px 12px}.stat{background:var(--card);border:1px solid var(--line);border-radius:8px;padding:7px 12px;font-size:13px}
+.hero{padding:2px 28px 12px}
+.strip{display:grid;grid-template-columns:repeat(6,1fr);gap:10px;margin-top:10px}
+.card{background:var(--card);border:1px solid var(--line);border-top:4px solid var(--acc);border-radius:8px;padding:10px 12px;cursor:pointer;text-align:left;font:inherit;color:inherit}
+.card .rk,.card .imp{font-size:12px;color:var(--mut)}.card .nm{font-weight:700;white-space:nowrap;overflow:hidden;text-overflow:ellipsis}.card .net{font-size:16px;font-weight:700;color:var(--acc)}
+.tabs{display:flex;gap:6px;padding:0 28px;border-bottom:1px solid var(--line);align-items:center}.tabs>button{background:none;border:none;border-bottom:3px solid transparent;padding:9px 12px;font:inherit;font-weight:600;cursor:pointer;color:var(--mut)}.tabs>button.on{color:var(--ink);border-bottom-color:var(--acc)}
+.seg{margin-left:auto;display:flex;border:1px solid var(--line);border-radius:8px;overflow:hidden;margin-bottom:5px}.seg button{border:none;background:var(--card);padding:6px 12px;font:inherit;cursor:pointer;color:var(--mut)}.seg button.on{background:var(--acc);color:#fff}
+main{padding:14px 28px 28px}.filters{display:flex;gap:14px;flex-wrap:wrap;align-items:flex-end;font-size:13px}.filters label{display:flex;flex-direction:column;gap:4px;color:var(--mut)}
+.filters input,.filters select{font:inherit;padding:7px 9px;border:1px solid var(--line);border-radius:7px;background:var(--card);color:var(--ink);min-width:150px}
+.filters .chk{flex-direction:row;align-items:center;gap:7px;padding-bottom:8px;color:var(--ink)}.filters .chk input{min-width:0;width:auto}.fCount{margin-left:auto;color:var(--mut);padding-bottom:8px}
+.cover,.under{font-size:13px;color:var(--mut)}
+table{border-collapse:collapse;width:100%;border:1px solid var(--line);background:var(--card)}th,td{padding:10px 12px;text-align:left;border-bottom:1px solid var(--line);white-space:nowrap}
+th{font-size:12px;color:var(--mut);background:#f4f0e6}tbody tr{cursor:pointer}
+td.num{text-align:right}.slug{font-size:12px;color:var(--mut)}
+.watch{display:inline-block;background:#fef3c7;color:#92400e;font-size:11px;font-weight:700;padding:1px 7px;margin-left:7px}
+.bar{height:5px;background:#e8e2d4;margin-top:4px;min-width:70px}.bar i{display:block;height:5px;background:var(--acc)}
+.pos{color:var(--acc);font-weight:600}.neg{color:var(--neg);font-weight:600}
+.tier{display:inline-block;font-size:11px;font-weight:700;border-radius:20px;padding:2px 9px}.t0{background:#d1fae5;color:#065f46}.t1{background:#dbeafe;color:#1e40af}.t2{background:#fef3c7;color:#92400e}.t3{background:#e5e7eb;color:#4b5563}
+.conf{font-size:12px;color:var(--mut)}
+#drawer{position:fixed;top:0;right:0;bottom:0;width:460px;max-width:94vw;background:var(--card);border-left:1px solid var(--line);overflow-y:auto;padding:20px 22px 30px;z-index:10}
+#drawer h2{font-size:20px;margin:2px 0}#drawer .close{float:right;border:1px solid var(--line);background:var(--card);border-radius:7px;padding:5px 10px;cursor:pointer;font:inherit}
+#drawer .big{font-size:24px;font-weight:700;margin:8px 0 2px}#drawer .bandline{font-size:13px;color:var(--mut)}
+#drawer ol{margin:8px 0;padding-left:22px}#drawer ol li{margin:0 0 10px;font-size:13.5px;line-height:1.5}#drawer h4{margin:18px 0 6px;font-size:14px}
+.kv{font-size:13px;color:var(--mut)}.kv b{color:var(--ink)}
+.banner{background:#fef3c7;border:1px solid #f59e0b;padding:10px 14px;font-weight:700;margin:0 0 14px}
+#tab-method table,#tab-ref table{font-size:13px;background:var(--card)}.small{font-size:12.5px;color:var(--mut)}
+footer{padding:14px 28px 26px;border-top:1px solid var(--line);font-size:13px;color:var(--mut)}
+svg text{font:11px sans-serif;fill:var(--mut)}
