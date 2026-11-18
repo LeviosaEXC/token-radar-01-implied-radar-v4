@@ -123,7 +123,7 @@ function renderMethod() {
     wfRows.push(['<b>Pooled</b>', '', '', '<b>' + shipRow[6].toFixed(3) + ' ± ' + shipRow[7].toFixed(3) + '</b>', '']);
   }
   $('tab-method').innerHTML = '<h2>Method — validation record</h2>' +
-    '<p><b>Shipped: R' + ship.rung + ', s = ' + ship.s + ', λ = ' + ship.lam + '.</b> ' + gate + '</p>' +
+    '<p><b>Shipped: R' + ship.rung + ', s = ' + ship.s + (ship.rung >= 3 ? ', λ = ' + ship.lam : '') + '.</b> ' + gate + '</p>' +
     '<h3>Ledger</h3>' +
     tbl(['Rung', 's', 'λ', 'Med', 'Gain', 'Boot P5', 'WF pooled', 'Top-40 ρ', 'G1–G4', 'Elig', ''], L.map(function (l) { return ['R' + l[0], l[1], l[0] >= 3 ? l[2] : '—', l[3].toFixed(3), (l[4] >= 0 ? '+' : '') + l[4].toFixed(3), l[5].toFixed(3), l[6].toFixed(3) + ' ± ' + l[7].toFixed(3), l[9].toFixed(3) + '/' + V.top40Def.toFixed(3), yn(l[11]) + yn(l[12]) + yn(l[13]) + yn(l[14]), yn(l[15]), l[16] ? '<b>SHIP</b>' : '']; })) +
     '<p class="small">G1 gain ≥ bar, boot lower 90% &gt; −0.05 · G2 pooled WF ≤ 1× SE · G3 origins ≤ 1.5× SE · G4 ρ within 1× paired SE. Top-40: candidate / default.</p>' +
@@ -213,5 +213,5 @@ renderMethod();
 renderRef();
 applyHash();
 var proof = verifyRecomputeProof();
-$('proof').innerHTML = 'Recompute verified <b>' + proof.ok + '/' + N + '</b> · drift <b>$' + proof.drift.toFixed(2) + '</b> · Shipped model R' + P.rung + ', s = ' + P.s + ', λ = ' + P.lam + ' · Snapshot as of ' + esc(R.meta.asOf) + ' · All figures projected from the sealed snapshot; nothing here is live data.';
+$('proof').innerHTML = 'Recompute verified <b>' + proof.ok + '/' + N + '</b> · drift <b>$' + proof.drift.toFixed(2) + '</b> · Shipped model R' + P.rung + ', s = ' + P.s + (P.rung >= 3 ? ', λ = ' + P.lam : '') + ' · Snapshot as of ' + esc(R.meta.asOf) + ' · All figures projected from the sealed snapshot; nothing here is live data.';
 })();
